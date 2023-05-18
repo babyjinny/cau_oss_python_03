@@ -22,7 +22,9 @@ def arithmetic_ops(op):
     return num1, num2, op(num1, num2)
 
 # +와 -는 함수로 정의한다
+# +함수
 def add(x, y): return x+y
+# -함수
 def sub(x, y): return x-y
 
 while True:
@@ -32,13 +34,13 @@ while True:
     elif op == "+":
         num1, num2, ret = arithmetic_ops(add) # 정의된 함수 사용
     elif op == "*":
-        num1, num2, ret = arithmetic_ops(lambda x,y:x*y) # 익명함수(lambda) 사용
-    elif op == "-":
+        num1, num2, ret = arithmetic_ops(lambda x,y: x*y) # 익명함수(lambda) 사용
+    elif op =="-" :
         num1, num2, ret = arithmetic_ops(sub)
-    elif op == "/":
-        num1, num2, ret = arithmetic_ops(lambda x,y:x/y)
-    elif op == "%":
-        num1, num2, ret = arithmetic_ops(lambda x,y:x%y)
+    elif op =="/" :
+        num1, num2, ret = arithmetic_ops(lambda x,y: x/y)
+    elif op =="%" :
+        num1, num2, ret = arithmetic_ops(lambda x,y: x%y)
     else:
         print("Invalid operation")
         continue # Invalid operation이므로 연산결과를 출력하지 않고 "넘어간다".
